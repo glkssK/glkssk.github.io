@@ -3,115 +3,229 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Zexuan Wang (王泽轩) | Personal Homepage</title>
+  <title>Zexuan Wang (王泽轩) | Homepage</title>
   <meta
     name="description"
     content="Personal homepage of Zexuan Wang (王泽轩), undergraduate student at Changan University."
   />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <div class="background-orb orb-1"></div>
+  <div class="background-orb orb-2"></div>
+
   <div class="page-shell">
     <aside class="sidebar">
-      <div class="sidebar-card">
-        <img src="avatar.jpg" alt="Zexuan Wang avatar" class="avatar" />
+      <div class="profile-card">
+        <div class="avatar-ring">
+          <img src="avatar.jpg" alt="Portrait of Zexuan Wang" class="avatar" />
+        </div>
 
-        <h1>
-          Zexuan Wang
-          <span class="name-cn">王泽轩</span>
-        </h1>
+        <div class="profile-text">
+          <p class="kicker">Academic Homepage</p>
+          <h1>Zexuan Wang <span>王泽轩</span></h1>
+          <p class="role">Undergraduate Student at Changan University</p>
+        </div>
 
-        <p class="title">Undergraduate Student at Changan University</p>
-
-        <div class="links-block">
+        <nav class="quick-nav">
           <a href="#about">About</a>
           <a href="#publications">Publications</a>
           <a href="#awards">Awards</a>
-        </div>
+        </nav>
 
-        <ul class="meta-list">
-          <li>🎓 Changan University</li>
-          <li>✉️ <a href="mailto:zexuanwang0812@gmail.com">zexuanwang0812@gmail.com</a></li>
-          <li>💻 <a href="https://github.com/glkssK" target="_blank" rel="noreferrer">GitHub</a></li>
-          <li>🔗 <a href="https://www.linkedin.com/in/zexuan-wang-3869303ba" target="_blank" rel="noreferrer">LinkedIn</a></li>
+        <ul class="contact-list">
+          <li>
+            <span class="icon">🎓</span>
+            <div>
+              <strong>Institution</strong>
+              <p>Changan University</p>
+            </div>
+          </li>
+          <li>
+            <span class="icon">✉️</span>
+            <div>
+              <strong>Email</strong>
+              <p><a href="mailto:zexuanwang0812@gmail.com">zexuanwang0812@gmail.com</a></p>
+            </div>
+          </li>
+          <li>
+            <span class="icon">💻</span>
+            <div>
+              <strong>GitHub</strong>
+              <p><a href="https://github.com/glkssK" target="_blank" rel="noreferrer">github.com/glkssK</a></p>
+            </div>
+          </li>
+          <li>
+            <span class="icon">🔗</span>
+            <div>
+              <strong>LinkedIn</strong>
+              <p><a href="https://www.linkedin.com/in/zexuan-wang-3869303ba" target="_blank" rel="noreferrer">linkedin.com/in/zexuan-wang-3869303ba</a></p>
+            </div>
+          </li>
         </ul>
 
-        <p class="note">
-          Research interests: Motion Synthesis, Digital Humans, Generative AI for 3D, and Computer Vision.
-        </p>
+        <div class="interest-box">
+          <h3>Research Interests</h3>
+          <div class="tags">
+            <span>Motion Synthesis</span>
+            <span>Digital Humans</span>
+            <span>Generative AI for 3D</span>
+            <span>Computer Vision</span>
+          </div>
+        </div>
       </div>
     </aside>
 
     <main class="content">
-      <section id="about" class="section">
-        <div class="section-heading">
+      <section id="about" class="hero-card">
+        <div class="section-head">
           <span class="eyebrow">ABOUT ME</span>
-          <h2>About Me</h2>
+          <h2>Building motion, 3D, and vision-driven intelligence.</h2>
         </div>
-        <p>
-          I am currently an undergraduate student at Changan University. From 2024 to 2026, I work
-          with Prof. Xiaohua Xia at Changan University on no-reference image blur assessment. Since 2025,
-          I have also been fortunate to intern with Dr. Ronghui Li at Tsinghua University, where I work
-          on motion synthesis, digital humans, and generative AI for 3D.
+
+        <p class="lead">
+          I am currently an undergraduate student at <strong>Changan University</strong>. From <strong>2024 to 2026</strong>,
+          I work with <strong>Prof. Xiaohua Xia</strong> on <strong>no-reference image blur assessment</strong>.
+          Since <strong>2025</strong>, I have also been fortunate to intern with <strong>Dr. Ronghui Li</strong>
+          at <strong>Tsinghua University</strong>, where I focus on <strong>motion synthesis</strong>,
+          <strong>digital humans</strong>, and <strong>generative AI for 3D</strong>.
         </p>
+
         <p>
-          My research interests include Motion Synthesis, Digital Humans, Generative AI for 3D, and
-          Computer Vision. I am especially interested in connecting visual understanding, motion
-          generation, and 3D content creation through learning-based methods.
+          My research interests lie in Motion Synthesis, Digital Humans, Generative AI for 3D, and Computer Vision.
+          I am especially interested in connecting visual understanding, motion generation, and 3D content creation
+          through learning-based methods.
         </p>
+
+        <div class="highlights-grid">
+          <div class="highlight-card">
+            <span class="highlight-label">Current Focus</span>
+            <h3>Human motion & digital human generation</h3>
+            <p>Exploring how generative models can bridge motion, interaction, and 3D character creation.</p>
+          </div>
+          <div class="highlight-card">
+            <span class="highlight-label">Vision Research</span>
+            <h3>No-reference blur assessment</h3>
+            <p>Working on stable and accurate blind focus assessment with blur-centric augmentation strategies.</p>
+          </div>
+          <div class="highlight-card">
+            <span class="highlight-label">Academic Goal</span>
+            <h3>From perception to controllable generation</h3>
+            <p>Interested in unifying visual perception, motion modeling, and generative learning in 3D spaces.</p>
+          </div>
+        </div>
       </section>
 
-      <section id="publications" class="section">
-        <div class="section-heading">
-          <span class="eyebrow">PUBLICATIONS</span>
-          <h2>Selected Publications</h2>
+      <section id="publications" class="section-card">
+        <div class="section-head">
+          <span class="eyebrow">SELECTED PUBLICATIONS</span>
+          <h2>Research & Submissions</h2>
         </div>
 
-        <article class="paper-card">
-          <div class="paper-thumb">CCF-A</div>
-          <div class="paper-body">
+        <article class="pub-card">
+          <div class="pub-badge">CCF-A</div>
+          <div class="pub-content">
+            <div class="pub-meta-row">
+              <span class="status-pill">Under Review</span>
+              <span class="date-pill">Updated Apr 01, 2026</span>
+            </div>
             <h3>Music Conditioned Duet Dance Generation and Dance Accompaniment</h3>
             <p class="authors">
               Ronghui Li, Youliang Zhang, Yachao Zhang, <strong>Zexuan Wang</strong>, Yuxiang Zhang,
               Li Siyao, Jie Guo, Ziwei Liu, Yebin Liu, Xiu Li
             </p>
-            <p class="venue">ACMMM 2026 Dataset Track Submission · Under Review</p>
+            <p class="venue">ACMMM 2026 Dataset Track Submission</p>
             <p class="summary">
-              Submitted on 27 Mar 2026 and modified on 01 Apr 2026. This is a CCF-A submission on
-              music-conditioned duet dance generation and dance accompaniment.
+              A submission on music-conditioned duet dance generation and dance accompaniment,
+              with my contribution as the fourth author.
             </p>
           </div>
         </article>
 
-        <article class="paper-card">
-          <div class="paper-thumb">CCF-C</div>
-          <div class="paper-body">
+        <article class="pub-card">
+          <div class="pub-badge">CCF-C</div>
+          <div class="pub-content">
+            <div class="pub-meta-row">
+              <span class="status-pill">Under Review</span>
+              <span class="date-pill">Independent First Author</span>
+            </div>
             <h3>Hybrid evolutionary tuning with blur-centric augmentation for stable and accurate no-reference focus assessment</h3>
             <p class="authors"><strong>Zexuan Wang</strong>, Xiaohua Xia</p>
-            <p class="venue">Neurocomputing · Independent First-Author Submission · Under Review</p>
+            <p class="venue">Neurocomputing</p>
             <p class="summary">
-              A CCF-C submission on no-reference focus assessment, combining hybrid evolutionary tuning
-              with blur-centric augmentation for stable and accurate evaluation.
+              An independent first-author submission on no-reference focus assessment,
+              combining hybrid evolutionary tuning with blur-centric augmentation for stability and accuracy.
             </p>
           </div>
         </article>
       </section>
 
-      <section id="awards" class="section">
-        <div class="section-heading">
+      <section id="awards" class="section-card">
+        <div class="section-head">
           <span class="eyebrow">AWARDS & COMPETITIONS</span>
-          <h2>Awards & Competitions</h2>
+          <h2>Selected Honors</h2>
         </div>
 
-        <ul class="news-list">
-          <li><span>[2025]</span> 获得国家奖学金</li>
-          <li><span>[2025]</span> 机械工程创新创意大赛智能制造赛装备与运维赛道方向国二</li>
-          <li><span>[2025]</span> 机械工程创新创意大赛智能制造赛生产管控方向国三</li>
-          <li><span>[2025]</span> 先进机器人及仿真技术大赛国三</li>
-          <li><span>[2025]</span> 全球校园人工智能算法精英大赛国一</li>
-          <li><span>[2024]</span> 机械工程创新创意大赛智能制造赛创意赛道全国二等奖</li>
-          <li><span>[2024]</span> 《英语世界》杯全国大学生英语写作大赛本科生组全国三等奖</li>
-        </ul>
+        <div class="award-list">
+          <article class="award-item">
+            <div class="award-year">2025</div>
+            <div class="award-body">
+              <h3>National Scholarship</h3>
+              <p>国家奖学金</p>
+            </div>
+          </article>
+
+          <article class="award-item">
+            <div class="award-year">2025</div>
+            <div class="award-body">
+              <h3>National Second Prize</h3>
+              <p>机械工程创新创意大赛智能制造赛装备与运维赛道方向国二</p>
+            </div>
+          </article>
+
+          <article class="award-item">
+            <div class="award-year">2025</div>
+            <div class="award-body">
+              <h3>National Third Prize</h3>
+              <p>机械工程创新创意大赛智能制造赛生产管控方向国三</p>
+            </div>
+          </article>
+
+          <article class="award-item">
+            <div class="award-year">2025</div>
+            <div class="award-body">
+              <h3>National Third Prize</h3>
+              <p>先进机器人及仿真技术大赛国三</p>
+            </div>
+          </article>
+
+          <article class="award-item">
+            <div class="award-year">2025</div>
+            <div class="award-body">
+              <h3>National First Prize</h3>
+              <p>全球校园人工智能算法精英大赛国一</p>
+            </div>
+          </article>
+
+          <article class="award-item">
+            <div class="award-year">2024</div>
+            <div class="award-body">
+              <h3>National Second Prize</h3>
+              <p>机械工程创新创意大赛智能制造赛创意赛道全国二等奖</p>
+            </div>
+          </article>
+
+          <article class="award-item">
+            <div class="award-year">2024</div>
+            <div class="award-body">
+              <h3>National Third Prize</h3>
+              <p>《英语世界》杯全国大学生英语写作大赛本科生组全国三等奖</p>
+            </div>
+          </article>
+        </div>
       </section>
 
       <footer class="footer">
