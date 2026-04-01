@@ -1,33 +1,38 @@
-# Zexuan Wang 个人主页成品
+# Zexuan Wang Personal Homepage
 
-这个文件夹是已经替你写好的版本。
+This repository contains the source code for my personal academic homepage.
 
-## 你现在最简单的用法
+**Homepage:** https://glkssk.github.io
 
-如果你的 GitHub Pages 已经能打开：
+## About
 
-1. 打开你的仓库 `glkssk.github.io`
-2. 把这里面的 `index.html` 和 `styles.css` 上传到仓库根目录
-3. 如果 GitHub 提示同名文件会被替换，直接确认
-4. 点击 `Commit changes`
-5. 等 1–5 分钟后刷新 `https://glkssk.github.io`
+This website introduces my background, research interests, selected publications, and awards.
+I am **Zexuan Wang (王泽轩)**, an undergraduate student at **Changan University**.
+My current interests include:
 
-## 文件说明
+- Motion Synthesis
+- Digital Humans
+- Generative AI for 3D
+- Computer Vision
 
-- `index.html`：已经写好的主页内容
-- `styles.css`：样式文件
-- `avatar.svg`：头像占位图，可以以后换成你自己的照片
-- `.nojekyll`：给 GitHub Pages 用的
+## Main files
 
-## 以后你只需要改这几个位置
+- `index.html`: main page content
+- `styles.css`: page styles
+- `avatar.svg`: avatar placeholder image
+- `.nojekyll`: ensures GitHub Pages serves the site as a static website
 
-- 邮箱
-- GitHub / LinkedIn
-- About Me
-- Publications
-- Awards
+## Update the site
 
-如果你想换照片：
-1. 上传一张你的照片到仓库，比如 `avatar.jpg`
-2. 打开 `index.html`
-3. 把 `avatar.svg` 改成 `avatar.jpg`
+To modify the homepage, mainly edit:
+
+- `index.html` for text and links
+- `styles.css` for layout and visual style
+
+After committing changes to the `main` branch, GitHub Pages will automatically update the website.
+
+## Deployment
+
+This site is deployed with **GitHub Pages** at:
+
+**https://glkssk.github.io**
