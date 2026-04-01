@@ -30,14 +30,6 @@ img {
   max-width: 100%;
 }
 
-code {
-  background: #f2f4f8;
-  border: 1px solid var(--line);
-  border-radius: 6px;
-  padding: 0.1rem 0.35rem;
-  font-size: 0.92em;
-}
-
 .page-shell {
   max-width: 1280px;
   margin: 0 auto;
@@ -79,6 +71,13 @@ code {
   font-family: Georgia, "Times New Roman", serif;
 }
 
+.name-cn {
+  display: block;
+  font-size: 0.62em;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
 .title {
   margin: 12px 0 18px;
   text-align: center;
@@ -94,8 +93,7 @@ code {
   margin-bottom: 18px;
 }
 
-.links-block a,
-.paper-links a {
+.links-block a {
   text-decoration: none;
   color: var(--accent);
   background: var(--accent-soft);
@@ -107,7 +105,6 @@ code {
 }
 
 .links-block a:hover,
-.paper-links a:hover,
 .meta-list a:hover {
   opacity: 0.88;
 }
@@ -148,10 +145,6 @@ code {
   box-shadow: var(--shadow);
   padding: 28px 30px;
   margin-bottom: 24px;
-}
-
-.section-small {
-  padding-bottom: 24px;
 }
 
 .section-heading {
@@ -195,7 +188,7 @@ code {
 
 .news-list span {
   display: inline-block;
-  min-width: 96px;
+  min-width: 72px;
   font-weight: 700;
   color: var(--accent);
 }
@@ -227,12 +220,12 @@ code {
   display: grid;
   place-items: center;
   color: #4567c8;
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: 0.02em;
+  font-size: 1.05rem;
 }
 
-.paper-body h3,
-.timeline-content h3 {
+.paper-body h3 {
   margin: 0 0 6px;
   font-size: 1.2rem;
   line-height: 1.35;
@@ -249,51 +242,8 @@ code {
   color: var(--muted);
 }
 
-.paper-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 10px;
-}
-
-.timeline-item {
-  display: grid;
-  grid-template-columns: 140px minmax(0, 1fr);
-  gap: 18px;
-  padding: 16px 0;
-  border-top: 1px solid var(--line);
-}
-
-.timeline-item:first-of-type {
-  border-top: none;
-  padding-top: 0;
-}
-
-.timeline-year {
-  font-weight: 700;
-  color: var(--accent);
-}
-
-.timeline-content p {
-  margin-bottom: 0;
-  color: var(--muted);
-}
-
-.tag-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.tag {
-  display: inline-flex;
-  align-items: center;
-  padding: 8px 12px;
-  background: #f7f9ff;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  color: var(--muted);
-  font-weight: 600;
+.authors strong {
+  color: var(--text);
 }
 
 .footer {
@@ -333,8 +283,7 @@ code {
     font-size: 1.6rem;
   }
 
-  .paper-card,
-  .timeline-item {
+  .paper-card {
     grid-template-columns: 1fr;
   }
 

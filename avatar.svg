@@ -3,5 +3,5 @@
   <circle cx="256" cy="188" r="88" fill="#DCE7FF"/>
   <path d="M108 430C108 349.366 173.366 284 254 284H258C338.634 284 404 349.366 404 430V440H108V430Z" fill="#DCE7FF"/>
   <rect x="36" y="36" width="440" height="440" rx="36" stroke="#C9D6F7" stroke-width="16" stroke-dasharray="18 16"/>
-  <text x="256" y="468" text-anchor="middle" font-size="26" font-family="Arial, Helvetica, sans-serif" fill="#5B74C7">Replace with your photo</text>
+  <text x="256" y="468" text-anchor="middle" font-size="24" font-family="Arial, Helvetica, sans-serif" fill="#5B74C7">Replace with your photo</text>
 </svg>
