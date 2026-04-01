@@ -15,22 +15,6 @@ My current interests include:
 - Generative AI for 3D
 - Computer Vision
 
-## Main files
-
-- `index.html`: main page content
-- `styles.css`: page styles
-- `avatar.svg`: avatar placeholder image
-- `.nojekyll`: ensures GitHub Pages serves the site as a static website
-
-## Update the site
-
-To modify the homepage, mainly edit:
-
-- `index.html` for text and links
-- `styles.css` for layout and visual style
-
-After committing changes to the `main` branch, GitHub Pages will automatically update the website.
-
 ## Deployment
 
 This site is deployed with **GitHub Pages** at:
