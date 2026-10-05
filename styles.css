@@ -1051,3 +1051,104 @@ html[lang="zh-CN"] .entry-points { line-height: 1.92; }
 @media (max-width: 600px) {
   .local-institution-svg, .institution-text .local-institution-svg { max-width: 86px; }
 }
+
+
+/* 2026-10-05 image reliability fix
+   - project screenshots are embedded directly in HTML (no relative-path failures)
+   - institution visuals use compact local vector badges, not large placeholder cards
+*/
+.project-image-link {
+  display: block;
+  width: 100%;
+  border: 1px solid #d5dcda !important;
+  border-radius: 8px !important;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 5px 16px rgba(20, 35, 40, .11) !important;
+}
+.project-image-link img {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  max-height: 250px;
+  object-fit: contain !important;
+  background: #fff;
+}
+
+.institution-entry {
+  grid-template-columns: 92px minmax(0,1fr) !important;
+  gap: 24px !important;
+  align-items: center !important;
+}
+.institution-media {
+  width: 92px !important;
+  padding: 0 !important;
+  align-self: center;
+}
+.institution-badge-group {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.institution-badge {
+  display: block;
+  width: 68px;
+  height: 68px;
+  flex: 0 0 68px;
+  border: 0 !important;
+  border-radius: 50%;
+  background: transparent !important;
+  box-shadow: 0 3px 10px rgba(25, 35, 40, .10);
+}
+.institution-badge svg { display:block; width:100%; height:100%; }
+#education-bit .institution-media { width: 152px !important; }
+#education-bit { grid-template-columns: 152px minmax(0,1fr) !important; }
+#education-bit .institution-badge-group { flex-wrap: nowrap; }
+#education-bit .institution-badge { width: 64px; height:64px; flex-basis:64px; }
+
+/* Hide legacy placeholder systems if any stale markup survives. */
+.institution-mark, .institution-text, .mark-fallback, .local-institution-svg { display:none !important; }
+
+@media (max-width: 700px) {
+  .institution-entry,
+  #education-bit {
+    grid-template-columns: 72px minmax(0,1fr) !important;
+    gap: 15px !important;
+    align-items: start !important;
+  }
+  .institution-media,
+  #education-bit .institution-media { width:72px !important; }
+  .institution-badge-group { flex-direction: column; gap:6px; }
+  .institution-badge,
+  #education-bit .institution-badge {
+    width: 56px;
+    height: 56px;
+    flex-basis:56px;
+  }
+  .project-image-link img { max-height:none; }
+}
+
+
+/* Final institution-logo treatment */
+.institution-badge-group, .institution-badge, .institution-mark, .institution-text, .mark-fallback { display:none !important; }
+.institution-entry { grid-template-columns: 190px minmax(0,1fr) !important; gap: 28px !important; align-items:center !important; }
+.institution-media { width:190px !important; padding:0 !important; display:flex !important; align-items:center !important; justify-content:center !important; }
+.institution-logo-group { display:flex; align-items:center; justify-content:center; gap:12px; width:100%; }
+.institution-logo-image { display:block; max-width:180px; max-height:92px; width:auto; height:auto; object-fit:contain; filter: drop-shadow(0 3px 7px rgba(0,0,0,.10)); }
+#education-bit .institution-logo-image { max-width:84px; max-height:84px; }
+#education-bit .institution-logo-group { justify-content:flex-start; gap:14px; }
+@media (max-width: 700px) {
+  .institution-entry { grid-template-columns: 105px minmax(0,1fr) !important; gap:18px !important; }
+  .institution-media { width:105px !important; }
+  .institution-logo-image { max-width:100px; max-height:70px; }
+  #education-bit .institution-logo-image { max-width:46px; max-height:46px; }
+  #education-bit .institution-logo-group { gap:6px; }
+}
+@media (max-width: 480px) {
+  .institution-entry { grid-template-columns: 86px minmax(0,1fr) !important; gap:14px !important; }
+  .institution-media { width:86px !important; }
+  .institution-logo-image { max-width:82px; max-height:60px; }
+  #education-bit .institution-logo-image { max-width:38px; max-height:38px; }
+}
