@@ -1131,24 +1131,150 @@ html[lang="zh-CN"] .entry-points { line-height: 1.92; }
 }
 
 
-/* Final institution-logo treatment */
-.institution-badge-group, .institution-badge, .institution-mark, .institution-text, .mark-fallback { display:none !important; }
-.institution-entry { grid-template-columns: 190px minmax(0,1fr) !important; gap: 28px !important; align-items:center !important; }
-.institution-media { width:190px !important; padding:0 !important; display:flex !important; align-items:center !important; justify-content:center !important; }
-.institution-logo-group { display:flex; align-items:center; justify-content:center; gap:12px; width:100%; }
-.institution-logo-image { display:block; max-width:180px; max-height:92px; width:auto; height:auto; object-fit:contain; filter: drop-shadow(0 3px 7px rgba(0,0,0,.10)); }
-#education-bit .institution-logo-image { max-width:84px; max-height:84px; }
-#education-bit .institution-logo-group { justify-content:flex-start; gap:14px; }
-@media (max-width: 700px) {
-  .institution-entry { grid-template-columns: 105px minmax(0,1fr) !important; gap:18px !important; }
-  .institution-media { width:105px !important; }
-  .institution-logo-image { max-width:100px; max-height:70px; }
-  #education-bit .institution-logo-image { max-width:46px; max-height:46px; }
-  #education-bit .institution-logo-group { gap:6px; }
+/* Shared affiliation grid: Education and Research experience use the same
+   logo-column centre and text start at every breakpoint. Only logo size and
+   the stacked BIT/Qiyuan group differ between entries. */
+#experience,
+#education {
+  --affiliation-column: 228px;
+  --affiliation-gap: 30px;
 }
-@media (max-width: 480px) {
-  .institution-entry { grid-template-columns: 86px minmax(0,1fr) !important; gap:14px !important; }
-  .institution-media { width:86px !important; }
-  .institution-logo-image { max-width:82px; max-height:60px; }
-  #education-bit .institution-logo-image { max-width:38px; max-height:38px; }
+
+.institution-badge-group,
+.institution-badge,
+.institution-mark,
+.institution-text,
+.mark-fallback {
+  display: none !important;
+}
+
+:is(#experience, #education) .institution-entry {
+  display: grid;
+  grid-template-columns: var(--affiliation-column) minmax(0, 1fr) !important;
+  gap: var(--affiliation-gap) !important;
+  align-items: center !important;
+}
+
+:is(#experience, #education) .institution-entry .institution-media {
+  width: 100% !important;
+  min-width: 0;
+  margin: 0;
+  padding: 0 !important;
+  display: flex !important;
+  align-self: center;
+  align-items: center !important;
+  justify-content: center !important;
+  background: transparent;
+}
+
+:is(#experience, #education) .institution-logo-group {
+  display: flex;
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 16px;
+  flex-wrap: nowrap;
+}
+
+:is(#experience, #education) .institution-logo-image {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: min(100%, var(--logo-width, 214px)) !important;
+  max-height: var(--logo-height, 120px) !important;
+  flex: 0 1 auto;
+  object-fit: contain;
+  background: transparent !important;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, .10));
+}
+
+#experience-air {
+  --logo-width: 220px;
+  --logo-height: 118px;
+}
+#experience-sigs {
+  --logo-width: 214px;
+  --logo-height: 126px;
+}
+#experience-qiyuan {
+  --logo-width: 150px;
+  --logo-height: 82px;
+}
+#experience-changan,
+#education-chd {
+  --logo-width: 110px;
+  --logo-height: 110px;
+}
+
+#education-bit .institution-logo-group {
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 14px !important;
+}
+#education-bit .institution-logo-image:first-child {
+  --logo-width: 88px;
+  --logo-height: 88px;
+}
+#education-bit .institution-logo-image:last-child {
+  --logo-width: 138px;
+  --logo-height: 74px;
+}
+
+@media (max-width: 860px) {
+  #experience,
+  #education {
+    --affiliation-column: 140px;
+    --affiliation-gap: 20px;
+  }
+  #experience-qiyuan {
+    --logo-width: 112px;
+    --logo-height: 60px;
+  }
+  #experience-changan,
+  #education-chd {
+    --logo-width: 64px;
+    --logo-height: 64px;
+  }
+  #education-bit .institution-logo-image:first-child {
+    --logo-width: 60px;
+    --logo-height: 60px;
+  }
+  #education-bit .institution-logo-image:last-child {
+    --logo-width: 104px;
+    --logo-height: 56px;
+  }
+  #education-bit .institution-logo-group { gap: 10px !important; }
+}
+
+@media (max-width: 560px) {
+  #experience,
+  #education {
+    --affiliation-column: 96px;
+    --affiliation-gap: 14px;
+  }
+  :is(#experience, #education) .institution-entry {
+    align-items: start !important;
+  }
+  :is(#experience, #education) .institution-logo-group { gap: 8px; }
+  #experience-qiyuan {
+    --logo-width: 82px;
+    --logo-height: 44px;
+  }
+  #experience-changan,
+  #education-chd {
+    --logo-width: 42px;
+    --logo-height: 42px;
+  }
+  #education-bit .institution-logo-image:first-child {
+    --logo-width: 40px;
+    --logo-height: 40px;
+  }
+  #education-bit .institution-logo-image:last-child {
+    --logo-width: 74px;
+    --logo-height: 40px;
+  }
+  #education-bit .institution-logo-group { gap: 8px !important; }
 }
